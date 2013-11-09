@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>Douglass C. De Antonio - Curriculum Vitae</title>
 
@@ -6,112 +7,63 @@
 <meta name="description" content="The Curriculum Vitae of Douglass C. De Antonio."/>
 <meta charset="UTF-8"> 
 
-<link type="text/css" rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
-<style>
-    body {
-      
-      padding: 0;
-      margin: 0;
-    }
-
-    #cv {
-      border-radius: 5px;
-      width: 800px
-      -moz-box-shadow:    3px 3px 5px 16px #888;
-      -webkit-box-shadow: 3px 3px 5px 16px #888;
-      box-shadow:         3px 3px 5px 16px #888;
-    }
-    #sticker {
-      border-radius: 5px;
-      width: 800px;
-      -moz-box-shadow:    3px 3px 5px 16px #555;
-      -webkit-box-shadow: 3px 3px 5px 16px #555;
-      box-shadow:         3px 3px 5px 16px #555;
-    }
-    
-  </style>
-
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.sticky.js"></script>
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
   <script>
     $(window).load(function(){
       $("#sticker").sticky({ topSpacing: 0, center:true, className:"hey" });
     });
   </script>
-  
-
-<script src="jquery-ui.min.js"></script>
-<!--<script src="turn.js"></script>-->
-<link rel="stylesheet" href="turn.css">
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" src="js.animatescroll.js"></script>
-<!--<img id="target" src="code.png">
-
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-
 </head>
-
-
-
 <body id="top">
-<div id="cv">
+
+<div id="cv" class="instaFade">
   <div id="sticker">
-	<div class="mainDetails" >
-		
-		
-		<div id="name">
-			<h1>Douglass C. De Antonio</h1>
-			<h2>Web Programmer</h2>
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<!--<img src="headshot.jpg" alt="Douglass C. De Antonio" />-->
 		</div>
 		
-		<div id="contactDetails">
+		<div id="name">
+			<h1 class="quickFade delayTwo">Douglass C. De Antonio</h1>
+			<h2 class="quickFade delayThree">Web Programmer</h2>
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>e: <a href="mailto:email@dougdeantonio.com" target="_blank">email@dougdeantonio.com</a></li>
 				<li>w: <a href="http://www.dougdeantonio.com">www.dougdeantonio.com</a></li>
-				<li>m: 814-943-8088</li>
+				<li>p: 814-943-8088</li>
 			</ul>
-			
 		</div>
 		
 		<div class="clear"></div>
-		<div></div>
-		<br/>
-		<hr>
-		<div id="menu">
-		  <center>Personal Profile &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Education &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Key Skills &nbsp;&nbsp;&nbsp;   |&nbsp;&nbsp;&nbsp;   Projects &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Work Experience &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Me</a></center>
-		 </div>
+		
+		
+		 
 	</div>
-   </div>
-
-
-
-
-
-
-	<div id="mainArea" >
+	</div>
+	<div id="mainArea" class="quickFade delayFive">
 		<section>
 			<article>
 				<div class="sectionTitle">
-				<br/>
-				<br/>
-				<br/>
 					<h1>Personal Profile</h1>
 				</div>
 				
 				<div class="sectionContent">
-				<br/>
-				<br/>
-				<br/>
 					<p>Welcome to my resume web page!  Please feel free to look around, and don't miss pulling the page fold in the upper left hand corner for a surprise!!!</p>
 				</div>
 			</article>
 			<div class="clear"></div>
 		</section>
+		
 		
 		<section>
 			<div class="sectionTitle">
@@ -181,10 +133,6 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-
-		
-		
-		
 		
 		<section>
 			<div class="sectionTitle">
@@ -232,22 +180,40 @@
 			<div class="clear"></div>
 		</section>
 		
-		
-		
-		
-		
-		
-		
+		<section>
+		<div class="sectionTitle">
+				<h1>Contact me</h1>
+			</div>
+			
+			<div class="sectionContent">
+			<form class="cmxform" id="commentForm" method="get" action="emailto">
+				<fieldset>
+					<legend><h2>Please provide your name, email address and a comment</h2></legend>
+					<p>
+					  <label for="cname">Name (required, at least 2 characters)</label>
+					  <input id="cname" name="name" minlength="2" type="text" required/>
+					</p>
+					<p>
+					  <label for="cemail">E-Mail (required)</label>
+					  <input id="cemail" type="email" name="email" required/>
+					</p>
+					<p>
+					  <label for="ccomment">Your comment (required)</label>
+					  <textarea id="ccomment" name="comment" required></textarea>
+					</p>
+					<p>
+					  <input class="submit" type="submit" value="Submit"/>
+					</p>
+				  </fieldset>
+			</form>
+			<script>
+			$("#commentForm").validate();
+			</script>
+			</div>
+			<div class="clear"></div>
+		</section>
 	</div>
 </div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3753241-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
+
 </body>
 </html>
