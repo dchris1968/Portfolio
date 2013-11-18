@@ -51,6 +51,11 @@ html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-ser
 	opacity: 0;
 }
 	
+.contact {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	margin-bottom: -2px;
+}
 	
 	
 p {
